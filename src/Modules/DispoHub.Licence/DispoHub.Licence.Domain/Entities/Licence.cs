@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using DispoHub.Licence.Domain.Enums;
 
 namespace DispoHub.Licence.Domain.Entities
 {
-    internal class Licence
+    public class Licence : Base
     {
+        public bool Active { get;set; }
+        public string Key { get; set; }
+        public DateTime CreationDate { get; set; }
+        public DateTime ExpirationDate { get; set; }
+        public eLicenceType Type { get; set; }
     }
 }
