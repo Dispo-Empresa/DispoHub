@@ -1,4 +1,5 @@
-﻿using DispoHub.Licence.Domain.Enums;
+﻿using DispoHub.Core.Domain.Entities;
+using DispoHub.Licence.Domain.Enums;
 
 namespace DispoHub.Licence.Domain.Entities
 {

@@ -1,5 +1,4 @@
-﻿using DispoHub.Licence.Domain.Entities;
-using DispoHub.Licence.Infrastructure.Mappings;
+﻿using DispoHub.Licence.Infrastructure.Mappings;
 using Microsoft.EntityFrameworkCore;
 
 namespace DispoHub.Licence.Infrastructure

@@ -19,19 +19,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DispoHub.Licence.API", "src
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DispoHub.Mensager", "DispoHub.Mensager", "{6203E3EF-336B-4B23-AA34-9E940A7988FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DispoHub.Mensager.Application", "src\Modules\DispoHub.Mensager\DispoHub.Mensager.Application\DispoHub.Mensager.Application.csproj", "{66C52F9A-F154-46F5-9CF9-C8586FF56BA8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DispoHub.Mensager.Application", "src\Modules\DispoHub.Mensager\DispoHub.Mensager.Application\DispoHub.Mensager.Application.csproj", "{66C52F9A-F154-46F5-9CF9-C8586FF56BA8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DispoHub.Mensager.Domain", "src\Modules\DispoHub.Mensager\DispoHub.Mensager.Domain\DispoHub.Mensager.Domain.csproj", "{268BE181-7BE3-461A-A23C-9C2B4834F1AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DispoHub.Mensager.Domain", "src\Modules\DispoHub.Mensager\DispoHub.Mensager.Domain\DispoHub.Mensager.Domain.csproj", "{268BE181-7BE3-461A-A23C-9C2B4834F1AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DispoHub.Mensager.Infrastructure", "src\Modules\DispoHub.Mensager\DispoHub.Mensager.Infrastructure\DispoHub.Mensager.Infrastructure.csproj", "{32A475C5-527D-4F54-9743-1154168A7CB7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DispoHub.Mensager.Infrastructure", "src\Modules\DispoHub.Mensager\DispoHub.Mensager.Infrastructure\DispoHub.Mensager.Infrastructure.csproj", "{32A475C5-527D-4F54-9743-1154168A7CB7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DispoHub.Core", "DispoHub.Core", "{CEA6667F-C696-4576-B3FB-1227F65D50B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DispoHub.Core.Application", "src\Modules\DispoHub.Core\DispoHub.Core.Application\DispoHub.Core.Application.csproj", "{8FF3CAEE-0C09-41BD-AB3A-B0433D75B7F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DispoHub.Core.Application", "src\Modules\DispoHub.Core\DispoHub.Core.Application\DispoHub.Core.Application.csproj", "{8FF3CAEE-0C09-41BD-AB3A-B0433D75B7F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DispoHub.Core.Domain", "src\Modules\DispoHub.Core\DispoHub.Core.Domain\DispoHub.Core.Domain.csproj", "{C139FFAD-A4CB-46E1-9CC3-B47B722EB606}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DispoHub.Core.Domain", "src\Modules\DispoHub.Core\DispoHub.Core.Domain\DispoHub.Core.Domain.csproj", "{C139FFAD-A4CB-46E1-9CC3-B47B722EB606}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DispoHub.Core.Infrastructure", "src\Modules\DispoHub.Core\DispoHub.Core.Infrastructure\DispoHub.Core.Infrastructure.csproj", "{279E2EA6-8506-4F4E-9531-0838C660217A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DispoHub.Core.Infrastructure", "src\Modules\DispoHub.Core\DispoHub.Core.Infrastructure\DispoHub.Core.Infrastructure.csproj", "{279E2EA6-8506-4F4E-9531-0838C660217A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DispoHub.Licence.Infrastructure.Ioc", "src\Modules\DispoHub.Licence\DispoHub.Licence.Infrastructure.Ioc\DispoHub.Licence.Infrastructure.Ioc.csproj", "{2209241D-E9EF-4096-924B-65432AE31071}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -79,6 +81,10 @@ Global
 		{279E2EA6-8506-4F4E-9531-0838C660217A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{279E2EA6-8506-4F4E-9531-0838C660217A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{279E2EA6-8506-4F4E-9531-0838C660217A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2209241D-E9EF-4096-924B-65432AE31071}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2209241D-E9EF-4096-924B-65432AE31071}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2209241D-E9EF-4096-924B-65432AE31071}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2209241D-E9EF-4096-924B-65432AE31071}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -97,6 +103,7 @@ Global
 		{8FF3CAEE-0C09-41BD-AB3A-B0433D75B7F0} = {CEA6667F-C696-4576-B3FB-1227F65D50B1}
 		{C139FFAD-A4CB-46E1-9CC3-B47B722EB606} = {CEA6667F-C696-4576-B3FB-1227F65D50B1}
 		{279E2EA6-8506-4F4E-9531-0838C660217A} = {CEA6667F-C696-4576-B3FB-1227F65D50B1}
+		{2209241D-E9EF-4096-924B-65432AE31071} = {83D71CDD-6F69-4CEA-AE5D-0F3CBEBCCC45}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0E66BFCC-6776-4127-94DB-6CFC6BFE7B1E}

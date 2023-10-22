@@ -20,6 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\DispoHub.Core\DispoHub.Core.Infrastructure\DispoHub.Core.Infrastructure.csproj" />
     <ProjectReference Include="..\DispoHub.Licence.Domain\DispoHub.Licence.Domain.csproj" />
   </ItemGroup>
 

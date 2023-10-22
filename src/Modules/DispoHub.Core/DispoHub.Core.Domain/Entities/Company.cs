@@ -1,6 +1,4 @@
-﻿using System.Net;
-
-namespace DispoHub.Core.Domain.Entities
+﻿namespace DispoHub.Core.Domain.Entities
 {
     public class Company : Base
     {

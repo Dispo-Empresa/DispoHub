@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\DispoHub.Core\DispoHub.Core.Domain\DispoHub.Core.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
