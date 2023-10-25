@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Modules\DispoHub.Core\DispoHub.Core.Infrastructure.Ioc\DispoHub.Core.Infrastructure.Ioc.csproj" />
     <ProjectReference Include="..\..\Modules\DispoHub.Core\DispoHub.Core.Infrastructure\DispoHub.Core.Infrastructure.csproj" />
     <ProjectReference Include="..\..\Modules\DispoHub.Licence\DispoHub.Licence.Infrastructure.Ioc\DispoHub.Licence.Infrastructure.Ioc.csproj" />
     <ProjectReference Include="..\..\Modules\DispoHub.Licence\DispoHub.Licence.Infrastructure\DispoHub.Licence.Infrastructure.csproj" />

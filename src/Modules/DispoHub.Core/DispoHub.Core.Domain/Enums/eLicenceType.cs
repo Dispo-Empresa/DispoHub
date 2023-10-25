@@ -1,4 +1,4 @@
-﻿namespace DispoHub.Licence.Domain.Enums
+﻿namespace DispoHub.Core.Domain.Enums
 {
     public enum eLicenceType
     {

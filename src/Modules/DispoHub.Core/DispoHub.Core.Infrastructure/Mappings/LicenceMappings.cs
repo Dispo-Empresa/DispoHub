@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace DispoHub.Licence.Infrastructure.Mappings
 {
-    public class LicenceMappings : IEntityTypeConfiguration<Domain.Entities.Licence>
+    public class LicenceMappings : IEntityTypeConfiguration<Core.Domain.Entities.Licence>
     {
-        public void Configure(EntityTypeBuilder<Domain.Entities.Licence> builder)
+        public void Configure(EntityTypeBuilder<Core.Domain.Entities.Licence> builder)
         {
             builder.ToTable("Licences");
 
@@ -39,6 +39,11 @@ namespace DispoHub.Licence.Infrastructure.Mappings
 
             builder.Property(x => x.Type)
                    .IsRequired();
+
+            builder.HasOne(a => a.Company)
+                   .WithOne(b => b.Licence)
+                   .HasForeignKey<Core.Domain.Entities.Licence>(c => c.CompanyId)
+                   .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

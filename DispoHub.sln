@@ -33,7 +33,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DispoHub.Core.Domain", "src
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DispoHub.Core.Infrastructure", "src\Modules\DispoHub.Core\DispoHub.Core.Infrastructure\DispoHub.Core.Infrastructure.csproj", "{279E2EA6-8506-4F4E-9531-0838C660217A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DispoHub.Licence.Infrastructure.Ioc", "src\Modules\DispoHub.Licence\DispoHub.Licence.Infrastructure.Ioc\DispoHub.Licence.Infrastructure.Ioc.csproj", "{2209241D-E9EF-4096-924B-65432AE31071}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DispoHub.Licence.Infrastructure.Ioc", "src\Modules\DispoHub.Licence\DispoHub.Licence.Infrastructure.Ioc\DispoHub.Licence.Infrastructure.Ioc.csproj", "{2209241D-E9EF-4096-924B-65432AE31071}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DispoHub.Shared", "DispoHub.Shared", "{64EB91AE-BDCF-46A2-8F18-6C96A04FC8AF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DispoHub.Shared.Entities", "src\Modules\DispoHub.Shared\DispoHub.Shared.Entities\DispoHub.Shared.Entities.csproj", "{95E298A8-AE45-490D-A58E-391A9F031EAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DispoHub.Core.Infrastructure.Ioc", "src\Modules\DispoHub.Core\DispoHub.Core.Infrastructure.Ioc\DispoHub.Core.Infrastructure.Ioc.csproj", "{7F72AE3F-0A94-473A-B04E-50C136787580}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -85,6 +91,14 @@ Global
 		{2209241D-E9EF-4096-924B-65432AE31071}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2209241D-E9EF-4096-924B-65432AE31071}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2209241D-E9EF-4096-924B-65432AE31071}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95E298A8-AE45-490D-A58E-391A9F031EAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95E298A8-AE45-490D-A58E-391A9F031EAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95E298A8-AE45-490D-A58E-391A9F031EAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95E298A8-AE45-490D-A58E-391A9F031EAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F72AE3F-0A94-473A-B04E-50C136787580}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F72AE3F-0A94-473A-B04E-50C136787580}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F72AE3F-0A94-473A-B04E-50C136787580}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F72AE3F-0A94-473A-B04E-50C136787580}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -104,6 +118,9 @@ Global
 		{C139FFAD-A4CB-46E1-9CC3-B47B722EB606} = {CEA6667F-C696-4576-B3FB-1227F65D50B1}
 		{279E2EA6-8506-4F4E-9531-0838C660217A} = {CEA6667F-C696-4576-B3FB-1227F65D50B1}
 		{2209241D-E9EF-4096-924B-65432AE31071} = {83D71CDD-6F69-4CEA-AE5D-0F3CBEBCCC45}
+		{64EB91AE-BDCF-46A2-8F18-6C96A04FC8AF} = {0D0F5694-9257-4AE4-8E64-A707A16661B4}
+		{95E298A8-AE45-490D-A58E-391A9F031EAF} = {64EB91AE-BDCF-46A2-8F18-6C96A04FC8AF}
+		{7F72AE3F-0A94-473A-B04E-50C136787580} = {CEA6667F-C696-4576-B3FB-1227F65D50B1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0E66BFCC-6776-4127-94DB-6CFC6BFE7B1E}

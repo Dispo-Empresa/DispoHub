@@ -2,7 +2,8 @@
 
 namespace DispoHub.Licence.Domain.Repositories
 {
-    public interface ILicenceRepository : IBaseRepository<Entities.Licence>
+    public interface ILicenceRepository : IBaseRepository<Core.Domain.Entities.Licence>
     {
+        Core.Domain.Entities.Licence GetByCompanyId(long companyId);
     }
 }

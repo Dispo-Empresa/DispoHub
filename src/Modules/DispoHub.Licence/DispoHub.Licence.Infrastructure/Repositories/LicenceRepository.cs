@@ -1,15 +1,19 @@
-﻿using DispoHub.Core.Infrastructure.Repositories;
+﻿using DispoHub.Core.Infrastructure;
+using DispoHub.Core.Infrastructure.Repositories;
 using DispoHub.Licence.Domain.Repositories;
 
 namespace DispoHub.Licence.Infrastructure.Repositories
 {
-    public class LicenceRepository : BaseRepository<Domain.Entities.Licence, LicenceContext>, ILicenceRepository
+    public class LicenceRepository : BaseRepository<Core.Domain.Entities.Licence, CoreContext>, ILicenceRepository
     {
-        private readonly LicenceContext _licenceContext;
+        private readonly CoreContext _coreContext;
 
-        public LicenceRepository(LicenceContext context, LicenceContext licenceContext) : base(context)
+        public LicenceRepository(CoreContext context) : base(context)
         {
-            _licenceContext = licenceContext;
+            _coreContext = context;
         }
+
+        public Core.Domain.Entities.Licence GetByCompanyId(long companyId)
+            => _coreContext.Licences.FirstOrDefault(x => x.CompanyId == companyId);
     }
 }

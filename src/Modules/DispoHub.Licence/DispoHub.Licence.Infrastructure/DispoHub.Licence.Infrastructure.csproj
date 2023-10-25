@@ -24,4 +24,8 @@
     <ProjectReference Include="..\DispoHub.Licence.Domain\DispoHub.Licence.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Mappings\" />
+  </ItemGroup>
+
 </Project>

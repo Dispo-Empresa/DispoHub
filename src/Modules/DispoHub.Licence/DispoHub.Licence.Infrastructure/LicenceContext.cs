@@ -5,10 +5,14 @@ namespace DispoHub.Licence.Infrastructure
 {
     public class LicenceContext : DbContext
     {
-        public LicenceContext(DbContextOptions<LicenceContext> options) : base(options) { }
-        public LicenceContext() { }
+        public LicenceContext(DbContextOptions<LicenceContext> options) : base(options)
+        {
+        }
 
-        public DbSet<Domain.Entities.Licence> Licences { get; set; }
+        public LicenceContext()
+        { }
+
+        public DbSet<Core.Domain.Entities.Licence> Licences { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
