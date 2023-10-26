@@ -2,6 +2,7 @@ using DispoHub.Core.Domain.Enums;
 using DispoHub.Licence.API.Models;
 using DispoHub.Licence.Domain.Repositories;
 using Microsoft.AspNetCore.Mvc;
+using System.Text;
 
 namespace DispoHub.Licence.API.Controllers
 {
@@ -46,11 +47,23 @@ namespace DispoHub.Licence.API.Controllers
         public IActionResult Create()
         {
             Core.Domain.Entities.Licence licence = new Core.Domain.Entities.Licence();
+
+            const string characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            StringBuilder license = new StringBuilder();
+
+            Random random = new Random();
+
+            for (int i = 0; i < 10; i++)
+            {
+                int index = random.Next(characters.Length);
+                license.Append(characters[index]);
+            }
+
             licence.CreationDate = DateTime.Now;
             licence.ExpirationDate = DateTime.Now.AddYears(1);
             licence.Type = eLicenceType.Default;
-            licence.Key = "ABC123";
-            licence.CompanyId = 1;
+            licence.Key = license.ToString();
+            licence.CompanyId = 2;
 
             var createdLicence = _licenceRepository.Create(licence);
 
