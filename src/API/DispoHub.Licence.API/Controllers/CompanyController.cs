@@ -23,6 +23,16 @@ namespace DispoHub.Licence.API.Controllers
             return Ok(companies);
         }
 
+        [HttpDelete]
+        public IActionResult Remove([FromRoute] long id)
+        {
+            _companyRepository.Delete(id);
+
+            var companies = _companyRepository.GetAll();
+
+            return Ok(companies);
+        }
+
         [HttpPost]
         public IActionResult Create()
         {

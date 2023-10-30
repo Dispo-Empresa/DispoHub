@@ -1,8 +1,7 @@
-using DispoHub.Core.Domain.Enums;
 using DispoHub.Licence.API.Models;
 using DispoHub.Licence.Domain.Repositories;
+using DispoHub.Licence.Domain.UseCases;
 using Microsoft.AspNetCore.Mvc;
-using System.Text;
 
 namespace DispoHub.Licence.API.Controllers
 {
@@ -11,10 +10,12 @@ namespace DispoHub.Licence.API.Controllers
     public class LicencesController : ControllerBase
     {
         private readonly ILicenceRepository _licenceRepository;
+        private readonly IRegisterLicenceUseCase _registerLicenceUseCase;
 
-        public LicencesController(ILicenceRepository licenceRepository)
+        public LicencesController(ILicenceRepository licenceRepository, IRegisterLicenceUseCase registerLicenceUseCase)
         {
             _licenceRepository = licenceRepository;
+            _registerLicenceUseCase = registerLicenceUseCase;
         }
 
         [HttpGet]
@@ -43,31 +44,34 @@ namespace DispoHub.Licence.API.Controllers
 
         }
 
+        [HttpDelete]
+        public IActionResult Remove([FromRoute] long id)
+        {
+            _licenceRepository.Delete(id);
+
+            var companies = _licenceRepository.GetAll();
+
+            return Ok(companies);
+        }
+
         [HttpPost]
-        public IActionResult Create()
+        public IActionResult Create(CreateLicenceRequest request)
         {
             Core.Domain.Entities.Licence licence = new Core.Domain.Entities.Licence();
 
-            const string characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-            StringBuilder license = new StringBuilder();
+            licence.CompanyId = request.CompanyId;
 
-            Random random = new Random();
+            var createdLicence = _registerLicenceUseCase.Register(licence);
 
-            for (int i = 0; i < 10; i++)
-            {
-                int index = random.Next(characters.Length);
-                license.Append(characters[index]);
-            }
-
-            licence.CreationDate = DateTime.Now;
-            licence.ExpirationDate = DateTime.Now.AddYears(1);
-            licence.Type = eLicenceType.Default;
-            licence.Key = license.ToString();
-            licence.CompanyId = 2;
-
-            var createdLicence = _licenceRepository.Create(licence);
-
-            return Created("/api/v1/licences", createdLicence);
+            return Ok(new ResponseModelBuilder().WithSuccess(true)
+                                                .WithData(new GetLicenceResponse()
+                                                {
+                                                    Key = createdLicence.Key,
+                                                    CreationDate = createdLicence.CreationDate,
+                                                    ExpirationDate = createdLicence.ExpirationDate,
+                                                    Type = createdLicence.Type
+                                                })
+                                                .Build());
         }
     }
 }

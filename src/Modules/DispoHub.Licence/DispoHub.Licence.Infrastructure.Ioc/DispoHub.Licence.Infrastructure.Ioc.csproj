@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DispoHub.Licence.Application\DispoHub.Licence.Application.csproj" />
     <ProjectReference Include="..\DispoHub.Licence.Domain\DispoHub.Licence.Domain.csproj" />
     <ProjectReference Include="..\DispoHub.Licence.Infrastructure\DispoHub.Licence.Infrastructure.csproj" />
   </ItemGroup>

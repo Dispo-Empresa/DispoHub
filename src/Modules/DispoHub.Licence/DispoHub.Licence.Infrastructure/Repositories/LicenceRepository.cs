@@ -13,6 +13,9 @@ namespace DispoHub.Licence.Infrastructure.Repositories
             _coreContext = context;
         }
 
+        public bool ExistsByCompanyId(long companyId)
+            => _coreContext.Licences.Any(x => x.CompanyId == companyId);
+
         public Core.Domain.Entities.Licence GetByCompanyId(long companyId)
             => _coreContext.Licences.FirstOrDefault(x => x.CompanyId == companyId);
     }

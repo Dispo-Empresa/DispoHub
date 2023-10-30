@@ -1,4 +1,6 @@
-﻿using DispoHub.Licence.Domain.Repositories;
+﻿using DispoHub.Licence.Application.UseCases;
+using DispoHub.Licence.Domain.Repositories;
+using DispoHub.Licence.Domain.UseCases;
 using DispoHub.Licence.Infrastructure.Repositories;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -20,6 +22,7 @@ namespace DispoHub.Licence.Infrastructure.Ioc
 
         private static void InjectServices(IServiceCollection serviceColletion)
         {
+            serviceColletion.AddScoped<IRegisterLicenceUseCase, RegisterLicenceUseCase>();
         }
 
         private static void InjectGenerics(IServiceCollection serviceColletion)
