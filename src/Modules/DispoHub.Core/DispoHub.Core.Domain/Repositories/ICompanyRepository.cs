@@ -1,4 +1,4 @@
-﻿using DispoHub.Core.Domain.Entities;
+﻿using DispoHub.Shared.Domain.Entities;
 
 namespace DispoHub.Core.Domain.Repositories
 {

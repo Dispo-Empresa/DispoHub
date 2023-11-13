@@ -1,5 +1,4 @@
-using DispoHub.Core.Infrastructure;
-using DispoHub.Licence.Infrastructure;
+using DispoHub.Shared.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,20 +10,26 @@ builder.Services.AddControllers();
 #region Injections
 
 DispoHub.Core.Infrastructure.Ioc.Injector.InjectIoCServices(builder.Services);
-DispoHub.Licence.Infrastructure.Ioc.Injector.InjectIoCServices(builder.Services);
+DispoHub.Licensing.Infrastructure.Ioc.Injector.InjectIoCServices(builder.Services);
 builder.Services.AddSingleton(x => builder.Configuration);
 
 #endregion Injections
 
 #region Database
 
-builder.Services.AddDbContext<CoreContext>(option =>
-    option.UseSqlServer(builder.Configuration.GetConnectionString("DispoDefaultConnection")), ServiceLifetime.Transient);
-
-builder.Services.AddDbContext<LicenceContext>(option =>
+builder.Services.AddDbContext<DispoHubContext>(option =>
     option.UseSqlServer(builder.Configuration.GetConnectionString("DispoDefaultConnection")), ServiceLifetime.Transient);
 
 #endregion Database
+
+#region MediatR
+
+foreach (var assembly in AppDomain.CurrentDomain.GetAssemblies())
+{
+    builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(assembly));
+}
+
+#endregion
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

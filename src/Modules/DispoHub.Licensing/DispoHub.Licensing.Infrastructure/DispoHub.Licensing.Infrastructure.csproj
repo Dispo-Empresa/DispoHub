@@ -7,12 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.13" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.12">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.13" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.12">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -20,8 +18,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\DispoHub.Shared\DispoHub.Shared.Infrastructure.Persistence\DispoHub.Shared.Infrastructure.Persistence.csproj" />
-    <ProjectReference Include="..\DispoHub.Core.Domain\DispoHub.Core.Domain.csproj" />
+    <ProjectReference Include="..\..\DispoHub.Core\DispoHub.Core.Infrastructure\DispoHub.Core.Infrastructure.csproj" />
+    <ProjectReference Include="..\DispoHub.Licensing.Domain\DispoHub.Licensing.Domain.csproj" />
   </ItemGroup>
 
 </Project>

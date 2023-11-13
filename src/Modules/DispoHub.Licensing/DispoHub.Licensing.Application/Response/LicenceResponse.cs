@@ -1,8 +1,8 @@
 ﻿using DispoHub.Shared.Domain.Enums;
 
-namespace DispoHub.API.Models
+namespace DispoHub.Licensing.Application.Response
 {
-    public class GetLicenceResponse
+    public class LicenceResponse
     {
         public string Key { get; set; }
         public DateTime CreationDate { get; set; }

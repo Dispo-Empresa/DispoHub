@@ -1,17 +1,18 @@
-﻿using DispoHub.Core.Domain.Entities;
-using DispoHub.Core.Domain.Repositories;
+﻿using DispoHub.Core.Domain.Repositories;
+using DispoHub.Shared.Domain.Entities;
+using DispoHub.Shared.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 
 namespace DispoHub.Core.Infrastructure.Repositories
 {
-    public class BaseRepository<TEntity, TContext> : IBaseRepository<TEntity> where TEntity : Base where TContext : DbContext, new()
+    public class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : EntityBase, new()
     {
-        private readonly TContext _context;
+        private readonly DispoHubContext _context;
 
-        public BaseRepository(TContext context)
+        public BaseRepository(DispoHubContext context)
         {
-            _context = context;
+            _context = context ?? throw new ArgumentException(nameof(context));
         }
 
         public virtual TEntity Create(TEntity obj)

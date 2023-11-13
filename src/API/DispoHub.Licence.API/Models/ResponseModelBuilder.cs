@@ -1,4 +1,4 @@
-﻿namespace DispoHub.Licence.API.Models
+﻿namespace DispoHub.API.Models
 {
     public class ResponseModelBuilder
     {

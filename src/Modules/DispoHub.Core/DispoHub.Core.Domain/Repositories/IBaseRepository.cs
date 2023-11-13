@@ -1,9 +1,9 @@
-﻿using DispoHub.Core.Domain.Entities;
+﻿using DispoHub.Shared.Domain.Entities;
 using System.Linq.Expressions;
 
 namespace DispoHub.Core.Domain.Repositories
 {
-    public interface IBaseRepository<TEntity> where TEntity : Base
+    public interface IBaseRepository<TEntity> where TEntity : EntityBase
     {
         TEntity Create(TEntity obj);
 

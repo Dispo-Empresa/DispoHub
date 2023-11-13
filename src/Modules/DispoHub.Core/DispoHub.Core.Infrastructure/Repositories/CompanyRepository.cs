@@ -1,15 +1,16 @@
-﻿using DispoHub.Core.Domain.Entities;
-using DispoHub.Core.Domain.Repositories;
+﻿using DispoHub.Core.Domain.Repositories;
+using DispoHub.Shared.Domain.Entities;
+using DispoHub.Shared.Infrastructure.Persistence;
 
 namespace DispoHub.Core.Infrastructure.Repositories
 {
-    public class CompanyRepository : BaseRepository<Company, CoreContext>, ICompanyRepository
+    public class CompanyRepository : BaseRepository<Company>, ICompanyRepository
     {
-        private readonly CoreContext _coreContext;
+        private readonly DispoHubContext _dispoHubContext;
 
-        public CompanyRepository(CoreContext context) : base(context)
+        public CompanyRepository(DispoHubContext dispoHubContext) : base(dispoHubContext)
         {
-            _coreContext = context;
+            _dispoHubContext = dispoHubContext;
         }
     }
 }

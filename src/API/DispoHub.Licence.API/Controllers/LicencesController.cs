@@ -1,21 +1,22 @@
-using DispoHub.Licence.API.Models;
-using DispoHub.Licence.Domain.Repositories;
-using DispoHub.Licence.Domain.UseCases;
+using DispoHub.API.Models;
+using DispoHub.Licensing.Application.Commands;
+using DispoHub.Licensing.Domain.Repositories;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
-namespace DispoHub.Licence.API.Controllers
+namespace DispoHub.API.Controllers
 {
     [Route("/api/v1/licences")]
     [ApiController]
     public class LicencesController : ControllerBase
     {
         private readonly ILicenceRepository _licenceRepository;
-        private readonly IRegisterLicenceUseCase _registerLicenceUseCase;
+        private readonly IMediator _mediator;
 
-        public LicencesController(ILicenceRepository licenceRepository, IRegisterLicenceUseCase registerLicenceUseCase)
+        public LicencesController(ILicenceRepository licenceRepository, IMediator mediator)
         {
             _licenceRepository = licenceRepository;
-            _registerLicenceUseCase = registerLicenceUseCase;
+            _mediator = mediator;
         }
 
         [HttpGet]
@@ -41,7 +42,6 @@ namespace DispoHub.Licence.API.Controllers
                                                             .WithMessage("Licença expirada, por favor entre em contato com o Dispo para renovação.")
                                                             .Build());
             }
-
         }
 
         [HttpDelete]
@@ -55,21 +55,17 @@ namespace DispoHub.Licence.API.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(CreateLicenceRequest request)
+        public async Task<IActionResult> Create(CreateLicenceCommand command)
         {
-            Core.Domain.Entities.Licence licence = new Core.Domain.Entities.Licence();
-
-            licence.CompanyId = request.CompanyId;
-
-            var createdLicence = _registerLicenceUseCase.Register(licence);
+            var result = await _mediator.Send(command);
 
             return Ok(new ResponseModelBuilder().WithSuccess(true)
                                                 .WithData(new GetLicenceResponse()
                                                 {
-                                                    Key = createdLicence.Key,
-                                                    CreationDate = createdLicence.CreationDate,
-                                                    ExpirationDate = createdLicence.ExpirationDate,
-                                                    Type = createdLicence.Type
+                                                    Key = result.Key,
+                                                    CreationDate = result.CreationDate,
+                                                    ExpirationDate = result.ExpirationDate,
+                                                    Type = result.Type
                                                 })
                                                 .Build());
         }

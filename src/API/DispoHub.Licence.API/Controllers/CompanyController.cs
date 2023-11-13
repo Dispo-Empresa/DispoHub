@@ -1,8 +1,8 @@
-﻿using DispoHub.Core.Domain.Entities;
-using DispoHub.Core.Domain.Repositories;
+﻿using DispoHub.Core.Domain.Repositories;
+using DispoHub.Shared.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 
-namespace DispoHub.Licence.API.Controllers
+namespace DispoHub.API.Controllers
 {
     [Route("/api/v1/companies")]
     [ApiController]
