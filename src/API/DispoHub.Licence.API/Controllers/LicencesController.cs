@@ -20,7 +20,7 @@ namespace DispoHub.API.Controllers
         }
 
         [HttpGet]
-        public IActionResult Get(long companyId)
+        public IActionResult Get(long companyId) // colocar [FromRoute]
         {
             var licence = _licenceRepository.GetByCompanyId(companyId);
 
