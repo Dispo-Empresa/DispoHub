@@ -11,6 +11,7 @@ builder.Services.AddControllers();
 
 DispoHub.Core.Infrastructure.Ioc.Injector.InjectIoCServices(builder.Services);
 DispoHub.Licensing.Infrastructure.Ioc.Injector.InjectIoCServices(builder.Services);
+DispoHub.Mensager.Ioc.Injector.InjectIocServices(builder.Services);
 builder.Services.AddSingleton(x => builder.Configuration);
 
 #endregion Injections

@@ -18,10 +18,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Modules\DispoHub.Core\DispoHub.Core.Infrastructure.Ioc\DispoHub.Core.Infrastructure.Ioc.csproj" />
-    <ProjectReference Include="..\..\Modules\DispoHub.Core\DispoHub.Core.Infrastructure\DispoHub.Core.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\Modules\DispoHub.Core\DispoHub.Core.Infrastructure\DispoHub.Core.Infrastructure.Persistence.csproj" />
     <ProjectReference Include="..\..\Modules\DispoHub.Licensing\DispoHub.Licensing.Application\DispoHub.Licensing.Application.csproj" />
     <ProjectReference Include="..\..\Modules\DispoHub.Licensing\DispoHub.Licensing.Domain\DispoHub.Licensing.Domain.csproj" />
     <ProjectReference Include="..\..\Modules\DispoHub.Licensing\DispoHub.Licensing.Infrastructure.Ioc\DispoHub.Licensing.Infrastructure.Ioc.csproj" />
+    <ProjectReference Include="..\..\Modules\DispoHub.Mensager\DispoHub.Mensager.Ioc\DispoHub.Mensager.Ioc.csproj" />
+    <ProjectReference Include="..\..\Modules\DispoHub.Mensager\Email\DispoHub.Mensager.Email.Application\DispoHub.Mensager.Email.Application.csproj" />
   </ItemGroup>
 
 </Project>

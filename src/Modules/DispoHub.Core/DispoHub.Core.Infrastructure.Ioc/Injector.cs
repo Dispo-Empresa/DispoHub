@@ -1,5 +1,5 @@
 ﻿using DispoHub.Core.Domain.Repositories;
-using DispoHub.Core.Infrastructure.Repositories;
+using DispoHub.Core.Infrastructure.Persistence.Repositories;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace DispoHub.Core.Infrastructure.Ioc

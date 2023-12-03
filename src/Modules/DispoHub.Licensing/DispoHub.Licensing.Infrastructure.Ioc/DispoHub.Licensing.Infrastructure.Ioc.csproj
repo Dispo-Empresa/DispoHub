@@ -12,7 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DispoHub.Licensing.Application\DispoHub.Licensing.Application.csproj" />
-    <ProjectReference Include="..\DispoHub.Licensing.Infrastructure\DispoHub.Licensing.Infrastructure.csproj" />
+    <ProjectReference Include="..\DispoHub.Licensing.Infrastructure\DispoHub.Licensing.Infrastructure.Persistence.csproj" />
   </ItemGroup>
 
 </Project>

@@ -2,7 +2,7 @@
 using DispoHub.Shared.Domain.Entities;
 using DispoHub.Shared.Infrastructure.Persistence;
 
-namespace DispoHub.Core.Infrastructure.Repositories
+namespace DispoHub.Core.Infrastructure.Persistence.Repositories
 {
     public class CompanyRepository : BaseRepository<Company>, ICompanyRepository
     {

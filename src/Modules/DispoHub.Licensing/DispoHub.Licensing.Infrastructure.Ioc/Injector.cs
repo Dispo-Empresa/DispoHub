@@ -2,7 +2,7 @@
 using DispoHub.Licensing.Application.UseCases;
 using DispoHub.Licensing.Domain.Repositories;
 using DispoHub.Licensing.Domain.UseCases;
-using DispoHub.Licensing.Infrastructure.Repositories;
+using DispoHub.Licensing.Infrastructure.Persistence.Repositories;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
