@@ -4,7 +4,7 @@ using DispoHub.Shared.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 
-namespace DispoHub.Core.Infrastructure.Repositories
+namespace DispoHub.Core.Infrastructure.Persistence.Repositories
 {
     public class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : EntityBase, new()
     {

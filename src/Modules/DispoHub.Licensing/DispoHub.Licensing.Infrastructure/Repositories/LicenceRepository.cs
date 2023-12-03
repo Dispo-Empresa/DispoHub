@@ -1,9 +1,9 @@
-﻿using DispoHub.Core.Infrastructure.Repositories;
+﻿using DispoHub.Core.Infrastructure.Persistence.Repositories;
 using DispoHub.Licensing.Domain.Repositories;
 using DispoHub.Shared.Domain.Entities;
 using DispoHub.Shared.Infrastructure.Persistence;
 
-namespace DispoHub.Licensing.Infrastructure.Repositories
+namespace DispoHub.Licensing.Infrastructure.Persistence.Repositories
 {
     public class LicenceRepository : BaseRepository<Licence>, ILicenceRepository
     {

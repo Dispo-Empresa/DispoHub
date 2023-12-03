@@ -13,11 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DispoHub.API", "src\API\Dis
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DispoHub.Mensager", "DispoHub.Mensager", "{6203E3EF-336B-4B23-AA34-9E940A7988FB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DispoHub.Mensager.Application", "src\Modules\DispoHub.Mensager\DispoHub.Mensager.Application\DispoHub.Mensager.Application.csproj", "{66C52F9A-F154-46F5-9CF9-C8586FF56BA8}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DispoHub.Mensager.Domain", "src\Modules\DispoHub.Mensager\DispoHub.Mensager.Domain\DispoHub.Mensager.Domain.csproj", "{268BE181-7BE3-461A-A23C-9C2B4834F1AE}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DispoHub.Mensager.Infrastructure", "src\Modules\DispoHub.Mensager\DispoHub.Mensager.Infrastructure\DispoHub.Mensager.Infrastructure.csproj", "{32A475C5-527D-4F54-9743-1154168A7CB7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DispoHub.Core", "DispoHub.Core", "{CEA6667F-C696-4576-B3FB-1227F65D50B1}"
 EndProject
@@ -25,7 +21,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DispoHub.Core.Application",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DispoHub.Core.Domain", "src\Modules\DispoHub.Core\DispoHub.Core.Domain\DispoHub.Core.Domain.csproj", "{C139FFAD-A4CB-46E1-9CC3-B47B722EB606}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DispoHub.Core.Infrastructure", "src\Modules\DispoHub.Core\DispoHub.Core.Infrastructure\DispoHub.Core.Infrastructure.csproj", "{279E2EA6-8506-4F4E-9531-0838C660217A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DispoHub.Core.Infrastructure.Persistence", "src\Modules\DispoHub.Core\DispoHub.Core.Infrastructure\DispoHub.Core.Infrastructure.Persistence.csproj", "{279E2EA6-8506-4F4E-9531-0838C660217A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DispoHub.Core.Infrastructure.Ioc", "src\Modules\DispoHub.Core\DispoHub.Core.Infrastructure.Ioc\DispoHub.Core.Infrastructure.Ioc.csproj", "{7F72AE3F-0A94-473A-B04E-50C136787580}"
 EndProject
@@ -39,11 +35,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DispoHub.Licensing.Applicat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DispoHub.Licensing.Domain", "src\Modules\DispoHub.Licensing\DispoHub.Licensing.Domain\DispoHub.Licensing.Domain.csproj", "{05908174-50BA-49E6-82A5-DC21CB2A5755}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DispoHub.Licensing.Infrastructure", "src\Modules\DispoHub.Licensing\DispoHub.Licensing.Infrastructure\DispoHub.Licensing.Infrastructure.csproj", "{FABAF782-C8DF-4297-8C3C-0350FCB8DF61}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DispoHub.Licensing.Infrastructure.Persistence", "src\Modules\DispoHub.Licensing\DispoHub.Licensing.Infrastructure\DispoHub.Licensing.Infrastructure.Persistence.csproj", "{FABAF782-C8DF-4297-8C3C-0350FCB8DF61}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DispoHub.Licensing.Infrastructure.Ioc", "src\Modules\DispoHub.Licensing\DispoHub.Licensing.Infrastructure.Ioc\DispoHub.Licensing.Infrastructure.Ioc.csproj", "{A16F883E-EDB3-43EA-B366-3ACA27B1CA39}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DispoHub.Shared.Utils", "src\Modules\DispoHub.Shared\DispoHub.Shared.Utils\DispoHub.Shared.Utils.csproj", "{1559922F-6910-4976-9FF0-647C6E7FED88}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DispoHub.Shared.Utils", "src\Modules\DispoHub.Shared\DispoHub.Shared.Utils\DispoHub.Shared.Utils.csproj", "{1559922F-6910-4976-9FF0-647C6E7FED88}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Email", "Email", "{8FF3ECC1-4556-4428-ADB0-8D3EB416FA5E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DispoHub.Mensager.Email.Application", "src\Modules\DispoHub.Mensager\Email\DispoHub.Mensager.Email.Application\DispoHub.Mensager.Email.Application.csproj", "{053B9911-CBBA-482E-9D90-C993A99B5A64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DispoHub.Mensager.Email.Infra.Messaging", "src\Modules\DispoHub.Mensager\Email\DispoHub.Mensager.Email.Infra.Messaging\DispoHub.Mensager.Email.Infra.Messaging.csproj", "{8E20A5FC-481E-48EC-BB9E-E5B8076459F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DispoHub.Mensager.Ioc", "src\Modules\DispoHub.Mensager\DispoHub.Mensager.Ioc\DispoHub.Mensager.Ioc.csproj", "{7A3C55DE-ECC8-4D71-AB5E-D833645B7516}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,18 +59,10 @@ Global
 		{A3131234-984F-4ED5-8CF3-CA079DBC2022}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3131234-984F-4ED5-8CF3-CA079DBC2022}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A3131234-984F-4ED5-8CF3-CA079DBC2022}.Release|Any CPU.Build.0 = Release|Any CPU
-		{66C52F9A-F154-46F5-9CF9-C8586FF56BA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{66C52F9A-F154-46F5-9CF9-C8586FF56BA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{66C52F9A-F154-46F5-9CF9-C8586FF56BA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{66C52F9A-F154-46F5-9CF9-C8586FF56BA8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{268BE181-7BE3-461A-A23C-9C2B4834F1AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{268BE181-7BE3-461A-A23C-9C2B4834F1AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{268BE181-7BE3-461A-A23C-9C2B4834F1AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{268BE181-7BE3-461A-A23C-9C2B4834F1AE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{32A475C5-527D-4F54-9743-1154168A7CB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{32A475C5-527D-4F54-9743-1154168A7CB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{32A475C5-527D-4F54-9743-1154168A7CB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{32A475C5-527D-4F54-9743-1154168A7CB7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8FF3CAEE-0C09-41BD-AB3A-B0433D75B7F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8FF3CAEE-0C09-41BD-AB3A-B0433D75B7F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8FF3CAEE-0C09-41BD-AB3A-B0433D75B7F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -111,6 +107,18 @@ Global
 		{1559922F-6910-4976-9FF0-647C6E7FED88}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1559922F-6910-4976-9FF0-647C6E7FED88}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1559922F-6910-4976-9FF0-647C6E7FED88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{053B9911-CBBA-482E-9D90-C993A99B5A64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{053B9911-CBBA-482E-9D90-C993A99B5A64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{053B9911-CBBA-482E-9D90-C993A99B5A64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{053B9911-CBBA-482E-9D90-C993A99B5A64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E20A5FC-481E-48EC-BB9E-E5B8076459F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E20A5FC-481E-48EC-BB9E-E5B8076459F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E20A5FC-481E-48EC-BB9E-E5B8076459F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E20A5FC-481E-48EC-BB9E-E5B8076459F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A3C55DE-ECC8-4D71-AB5E-D833645B7516}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A3C55DE-ECC8-4D71-AB5E-D833645B7516}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A3C55DE-ECC8-4D71-AB5E-D833645B7516}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A3C55DE-ECC8-4D71-AB5E-D833645B7516}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -119,9 +127,7 @@ Global
 		{83D71CDD-6F69-4CEA-AE5D-0F3CBEBCCC45} = {0D0F5694-9257-4AE4-8E64-A707A16661B4}
 		{A3131234-984F-4ED5-8CF3-CA079DBC2022} = {D04669A5-0FBE-4346-9726-EB8730C9C538}
 		{6203E3EF-336B-4B23-AA34-9E940A7988FB} = {0D0F5694-9257-4AE4-8E64-A707A16661B4}
-		{66C52F9A-F154-46F5-9CF9-C8586FF56BA8} = {6203E3EF-336B-4B23-AA34-9E940A7988FB}
 		{268BE181-7BE3-461A-A23C-9C2B4834F1AE} = {6203E3EF-336B-4B23-AA34-9E940A7988FB}
-		{32A475C5-527D-4F54-9743-1154168A7CB7} = {6203E3EF-336B-4B23-AA34-9E940A7988FB}
 		{CEA6667F-C696-4576-B3FB-1227F65D50B1} = {0D0F5694-9257-4AE4-8E64-A707A16661B4}
 		{8FF3CAEE-0C09-41BD-AB3A-B0433D75B7F0} = {CEA6667F-C696-4576-B3FB-1227F65D50B1}
 		{C139FFAD-A4CB-46E1-9CC3-B47B722EB606} = {CEA6667F-C696-4576-B3FB-1227F65D50B1}
@@ -135,6 +141,10 @@ Global
 		{FABAF782-C8DF-4297-8C3C-0350FCB8DF61} = {83D71CDD-6F69-4CEA-AE5D-0F3CBEBCCC45}
 		{A16F883E-EDB3-43EA-B366-3ACA27B1CA39} = {83D71CDD-6F69-4CEA-AE5D-0F3CBEBCCC45}
 		{1559922F-6910-4976-9FF0-647C6E7FED88} = {2CCB1502-7636-4816-ABC8-AA2D496949F4}
+		{8FF3ECC1-4556-4428-ADB0-8D3EB416FA5E} = {6203E3EF-336B-4B23-AA34-9E940A7988FB}
+		{053B9911-CBBA-482E-9D90-C993A99B5A64} = {8FF3ECC1-4556-4428-ADB0-8D3EB416FA5E}
+		{8E20A5FC-481E-48EC-BB9E-E5B8076459F4} = {8FF3ECC1-4556-4428-ADB0-8D3EB416FA5E}
+		{7A3C55DE-ECC8-4D71-AB5E-D833645B7516} = {6203E3EF-336B-4B23-AA34-9E940A7988FB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0E66BFCC-6776-4127-94DB-6CFC6BFE7B1E}
