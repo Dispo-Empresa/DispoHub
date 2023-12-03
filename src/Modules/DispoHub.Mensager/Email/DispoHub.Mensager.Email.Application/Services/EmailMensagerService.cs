@@ -43,7 +43,7 @@ namespace DispoHub.Mensager.Application.Services
                 email.From.Add(MailboxAddress.Parse(_config["EmailMensagerConfig:EmailFrom"]));
                 email.To.Add(MailboxAddress.Parse(request.EmailTo));
                 email.Subject = request.Subject;
-                email.Body = new TextPart(TextFormat.Html) { Text = BuildEmailBody(request.EmailTo, request.Body, true) };
+                email.Body = new TextPart(TextFormat.Html) { Text = BuildEmailBody(request) };
 
                 return email;
             }
@@ -71,16 +71,15 @@ namespace DispoHub.Mensager.Application.Services
             }
         }
 
-        private string BuildEmailBody(string email, string body, bool isPasswordRecovery)
+        private string BuildEmailBody(EmailMensagerRequestModel request)
         {
             string filePath = "../../Modules/DispoHub.Shared/DispoHub.Shared.Utils/EmailLayout/layout.html";
-            string passwordRecoveryObservation = isPasswordRecovery ? "Caso a redefinição de senha não tenha sido solicitada, desconsidere este email!" : string.Empty;
 
             string htmlContent = File.ReadAllText(filePath);
 
-            htmlContent = htmlContent.Replace("[@CustomerEmail]", email);
-            htmlContent = htmlContent.Replace("[@EmailBody]", body);
-            htmlContent = htmlContent.Replace("[@PasswordRecoveryObservation]", passwordRecoveryObservation);
+            htmlContent = htmlContent.Replace("[@CustomerEmail]", request.EmailTo);
+            htmlContent = htmlContent.Replace("[@EmailBody]", request.Body);
+            htmlContent = htmlContent.Replace("[@EmailObservation]", request.Observation);
 
             return htmlContent;
         }
