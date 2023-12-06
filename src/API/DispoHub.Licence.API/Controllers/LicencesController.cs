@@ -24,6 +24,13 @@ namespace DispoHub.API.Controllers
         {
             var licence = _licenceRepository.GetByCompanyId(companyId);
 
+            if (licence == null)
+            {
+                return BadRequest(new ResponseModelBuilder().WithSuccess(false)
+                                                            .WithMessage("Licença não encontrada")
+                                                            .Build());
+            }
+
             if (licence.ExpirationDate >= DateTime.Now)
             {
                 return Ok(new ResponseModelBuilder().WithSuccess(true)
